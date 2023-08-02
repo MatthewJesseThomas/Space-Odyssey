@@ -52,7 +52,6 @@
 
        <div class="wind__direction">
          <p class="sr-only" data-wind-direction-text></p>
-
          <!-- update --direction custom prop
               to change arrow direction -->
          <div class="wind__arrow" data-wind-direction-arrow></div>
@@ -73,41 +72,38 @@
        <label for="fah">°F</label>
        <input type="radio" id="fah" name="unit">
      </div> 
-
+     
+     <div class="previous-weather">
+       <!-- When clicked, toggle '.show-weather'
+       to .previous-weather div -->
+       <button for="weather-toggle" class="show-previous-weather"><span>&#8593;</span> <span class="sr-only">Show previous weather</span></button>
+  
+       <h2 class="main-title previous-weather__title">Previous 7 days</h2> 
+  
+       <div class="previous-days" data-previous-sols></div>
+     </div>
+  
+     <div class="previous-sol-div" data-previous-sol-div>
+        <div class="previous-day">
+          <h3 class="previous-day__sol">
+            Sol
+            <span data-sol></span>
+          </h3>
+          <p class="previous-day__date" data-date></p>
+          <p class="previous-day__temp">
+            High:
+            <span data-temp-high></span>
+            °<span data-temp-unit></span>
+          </p>
+          <p class="previous-day__temp">
+            Low:
+            <span data-temp-low></span>
+            °<span data-temp-unit></span>
+          </p>
+          <button class="previous-day__more-info" data-select-button>more info</button>
+        </div>
+     </div>
    </main>
 
-   <div class="previous-weather">
-     <!-- When clicked, toggle '.show-weather'
-     to .previous-weather div -->
-     <button for="weather-toggle" class="show-previous-weather"><span>&#8593;</span> <span class="sr-only">Show previous weather</span></button>
-
-     <h2 class="main-title previous-weather__title">Previous 7 days</h2> 
-
-     <div class="previous-days" data-previous-sols></div>
-   </div>
-
-   <template data-previous-sol-template>
-      <div class="previous-day">
-        <h3 class="previous-day__sol">
-          Sol
-          <span data-sol></span>
-        </h3>
-        <p class="previous-day__date" data-date></p>
-        <p class="previous-day__temp">
-          High:
-          <span data-temp-high></span>
-          °<span data-temp-unit></span>
-        </p>
-        <p class="previous-day__temp">
-          Low:
-          <span data-temp-low></span>
-          °<span data-temp-unit></span>
-        </p>
-        <button class="previous-day__more-info" data-select-button>more info</button>
-      </div>
-   </template>
-    
-
-  
 </body>
 </html>
